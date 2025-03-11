@@ -5,18 +5,21 @@ metadata:
     #'gitlab.com/instance': 'gitlab-gitlab.apps.cluster-7s5b7.sandbox2830.opentlc.com'
     #'gitlab.com/project-slug': development/quarkus-app
     'argocd/instance-name': 'default'
-    # 'argocd/app-selector': rht-gitops.com/janus-argocd=quarkus-app-bootstrap
-    'argocd/app-name': quarkus-app
+    'argocd/app-selector': rht-gitops.com/janus-argocd=quarkus-app-bootstrap
+    # 'argocd/app-name': canary-rollout-analysis
     # 'argocd/app-selector': rhtap/gitops=rhtap-nodeapp
-    'backstage.io/kubernetes-id': quarkus-app
-    # 'backstage.io/kubernetes-label-selector': app=canary-rollout-analysis
+    'backstage.io/kubernetes-id': test-app
+    # 'backstage.io/kubernetes-namespace': rhd-test
 
 
     'tekton.dev/build-namespace': quarkus-app-dev
     'janus-idp.io/tekton': quarkus-app
     'quay.io/repository-slug':  janus-idp/backstage-showcase
     'jenkins.io/job-full-name': 'calculator-app-pipeline'
-    #'github.com/project-slug': 'karthikjeeyar/GHA-matrix-workflow'
+    'github.com/project-slug': 'karthikjeeyar/GHA-matrix-workflow'
+    npm/package: '@backstage/plugin-catalog-reacts'
+    backstage.io/techdocs-ref: dir:.
+
   
     #'dev.azure.com/host-org': 'dev.azure.com/karthikjk11'
     #'dev.azure.com/project': dc-metro-app
@@ -25,7 +28,7 @@ metadata:
 
     #'nexus-repository-manager/docker.image-name': sample/helloworld
 
-    #'jfrog-artifactory/image-name':  helloworld
+    'jfrog-artifactory/image-name':  rhtap-docker-local/bootstrap
 
   name: test-app
   description: An example of a Backstage application.
