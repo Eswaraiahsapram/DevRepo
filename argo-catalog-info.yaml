@@ -3,15 +3,15 @@ kind: Component
 metadata:
   annotations:
     # ArgoCD Configuration - UPDATED
-    'argocd/app-name': 'test-quarkus-app'                                                                                                                             
-    'argocd/instance-name': 'openshift-gitops'                                                                                                                        
+    argocd/app-name: 'test-quarkus-app'                                                                                                                             
+    argocd/instance-name: 'openshift-gitops'                                                                                                                        
                                                                                                                                                                       
     # Keep your other annotations                                                                                                                                     
-    'backstage.io/kubernetes-id': quarkus-app                                                                                                                         
-    'tekton.dev/build-namespace': quarkus-app-dev
-    'janus-idp.io/tekton': quarkus-app                                                                                                                                
-    'quay.io/repository-slug': karthik_jk/node-test                                                                                                                   
-    'jenkins.io/job-full-name': 'calculator-app-pipeline'                                                                                                             
+    backstage.io/kubernetes-id: quarkus-app                                                                                                                         
+    tekton.dev/build-namespace: quarkus-app-dev
+    janus-idp.io/tekton: quarkus-app                                                                                                                                
+    quay.io/repository-slug: karthik_jk/node-test                                                                                                                   
+    jenkins.io/job-full-name: 'calculator-app-pipeline'                                                                                                             
     backstage.io/techdocs-ref: dir:.                                                                                                                                  
                                                                                                                                                                     
   name: test-quarkus-app                                                                                                                                              
