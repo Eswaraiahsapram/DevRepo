@@ -1,23 +1,23 @@
-apiVersion: backstage.io/v1alpha1
-kind: Component
+apiVersion: backstage.io/v1alpha1                                                                                                                                     
+kind: Component 
 metadata:
   annotations:
-    # ArgoCD Configuration - UPDATED
-    argocd/app-name: 'test-quarkus-app'                                                                                                                             
-    argocd/instance-name: 'openshift-gitops'                                                                                                                        
+    # ArgoCD Configuration - CORRECTED
+    argocd/app-name: test-quarkus-app                                                                                                                                 
+    argocd/instance-name: openshift-gitops
                                                                                                                                                                       
-    # Keep your other annotations                                                                                                                                     
-    backstage.io/kubernetes-id: quarkus-app                                                                                                                         
-    tekton.dev/build-namespace: quarkus-app-dev
-    janus-idp.io/tekton: quarkus-app                                                                                                                                
-    quay.io/repository-slug: karthik_jk/node-test                                                                                                                   
-    jenkins.io/job-full-name: 'calculator-app-pipeline'                                                                                                             
+    # Other integrations                                                                                                                                              
+    backstage.io/kubernetes-id: quarkus-app                                                                                                                           
+    tekton.dev/build-namespace: quarkus-app-dev                                                                                                                       
+    janus-idp.io/tekton: quarkus-app                                                                                                                                  
+    quay.io/repository-slug: karthik_jk/node-test                                                                                                                     
+    jenkins.io/job-full-name: calculator-app-pipeline                                                                                                                 
     backstage.io/techdocs-ref: dir:.                                                                                                                                  
-                                                                                                                                                                    
+                                                                                                                                                                      
   name: test-quarkus-app                                                                                                                                              
-  title: Test Quarkus App which contains very long title for testing                                                                                                  
+  title: Test Quarkus App which contains very long title for testing
   description: An example of a Backstage application                                                                                                                  
 spec:                                                                                                                                                                 
   type: service                                                                                                                                                       
   owner: janus-authors                                                                                                                                                
-  lifecycle: production
+  lifecycle: production                                                                                                                                               
